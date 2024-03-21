@@ -1,8 +1,12 @@
 from subprocess import PIPE, run
 
-comando = ["man", "whoami"]
+comando = ["cd", "diretorio"]
+
 execucao = run(comando, stdout=PIPE, stderr=PIPE)
-print(execucao)
+
+print(execucao.stdout.decode('utf-8'))
+print(execucao.stderr)
+
 
 
 '''
